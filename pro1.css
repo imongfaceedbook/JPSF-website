@@ -1,0 +1,152 @@
+/* project1.css */
+
+/* project1.css */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Arial', sans-serif;
+}
+
+.custom-heading {
+    font-size: 70px; /* Adjust the font size as needed */
+    font-family: cursive; /* Set the font to cursive */
+    color: #fff;
+    text-align: center;
+    text-shadow: 5px 5px 5px #000; /* Add text-shadow for black outline */
+}
+
+.background-image {
+    position: relative;
+    background-image: url('PSF.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.overlay {
+    position: absolute;
+    top: 10%; /* Adjust the top position as needed */
+    left: 10%; /* Adjust the left position as needed */
+    padding: 20px; /* Adjust the padding as needed */
+    background: rgba(18, 19, 18, 0.986);
+    background-image: url('sugba.jpg'); /* Add your background image here */
+    background-size: cover;
+    background-position: center;
+    width: 80%; /* Adjust the width as needed */
+    height: 80%; /* Adjust the height as needed */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #fff; /* Add border for the cornered box */
+    border-radius: 10px; /* Add border-radius for the cornered box */
+}
+
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    background-color: rgba(184, 228, 195, 0.37);
+    color: #fff;
+    padding: 1em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    opacity: 0;
+    animation: fadeIn 5s forwards;
+}
+
+/* Rest of your existing CSS styles remain unchanged */
+
+@keyframes fadeIn {
+    from {
+        opacity: 5;
+    }
+    to {
+        opacity: 5;
+    }
+}
+
+.logo {
+    font-size: 1.5em;
+}
+
+.menu-toggle {
+    cursor: pointer;
+    display: none;
+    transition: transform 5s ease-in-out;
+}
+
+.bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+}
+
+.nav-list {
+    display: flex;
+}
+
+.nav-list ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav-list li {
+    margin-right: 20px;
+    transition: margin 5s ease-in-out;
+}
+
+.nav-list a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 5s ease-in-out;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 1em;
+    text-align: center;
+}
+
+@media only screen and (max-width: 600px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-list ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.8);
+        transition: transform 5s ease-in-out;
+    }
+
+    .nav-list.show ul {
+        display: flex;
+    }
+
+    .nav-list li {
+        margin: 0;
+        text-align: center;
+    }
+
+    .menu-toggle.open {
+        transform: rotate(90deg);
+    }
+}
